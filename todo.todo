@@ -1,0 +1,38 @@
+
+Estas são as especificações:
+• Crie apenas a interface para um Sistema de Gestão de Faculdades que deve ser capaz
+de manter o registo de cursos, disciplinas, professores e alunos de uma Universidade; EM ANDAMENTO-----------------
+
+• Cada curso universitário deve ter várias disciplinas, subdivididas por semestres, que por
+sua vez, corresponderão a um professor e muitos alunos; OK-------------------
+
+• O sistema deve apresentar, nome do curso, nomes de disciplinas, o nome, a data de
+nascimento e o salário dos professores, bem como o nome dos alunos, e suas respetivas
+datas de nascimento, número de matrícula e notas; OK----------------------------
+
+• É importante termos uma visão geral de todos esses campos; TODO ----------------------
+
+• Devem ser apresentados os dados dummy; PESQUISAR SOBRE----------------
+
+• O objetivo do desafio é testar suas competências na utilização das últimas versões
+pacotes JS, CSS, Html. OK-------------
+
+Apresentação da página:
+
+• A navegação deve ser intuitiva e o design deve ser apelativo; TESTAR-------------
+
+• Podes usar a criatividade e incluir tabelas, filtros, cores e tipos de letras diferentes; AVALIAR-----------------
+
+• Deve ser possível adicionar qualquer atividades ou ter interface para isso; EM ANDAMENTO-------------------
+
+• Precisamos visualizar todos os dados na interface e ter a disponibilização para criação
+de novos dados e também para edição; EM ANDAMENTO-------------------
+
+• Deve ser possível visualizar componentes com erro e a forma (display) como os possíveis
+erros serão apresentados. IMPLEMENTAR NAS TELAS DE REGISTRO--------------------------
+
+
+Notas:
+
+O projeto deve ser criado no Git em que, quando abrimos no browser, consigamos navegar.Teras
+que definir o layout da página, fazer de forma compilada ou sem limite de páginas Html, de forma
