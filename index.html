@@ -31,7 +31,7 @@
                 <div class="categories">
                     <div class="button">Courses</div>
                         <div class="dropdwon">
-                            <p onclick="showCourse()">Engenharia da computação</p>
+                            <p onclick="showCourse()">Computer Engeneering</p>
                         </div>
                 </div>
         
@@ -58,7 +58,7 @@
                 <label for="course">Course</label>
                 <select name="course" id="course" required>
                     <option value=""></option>
-                    <option value="">Engenharia da Computação</option>
+                    <option value="">Computer Engeneering</option>
                     <option value="">Engenharia de Software</option>
                     <option value="">Design Gráfico</option>
                 </select>
@@ -92,7 +92,7 @@
                 <label for="course">Course</label>
                 <select name="course" id="professor-course" required>
                     <option value=""></option>
-                    <option value="">Engenharia da Computação</option>
+                    <option value="">Computer Engeneering</option>
                 </select>
 
                 <label for="subject">Subject</label>
@@ -137,11 +137,16 @@
                     <button id="add-subject" onclick="addSubject()">Add Subject</button> 
             </div>
 
+
                 <div class="subjects-added" id="subjects-added">
+                    <div class="added-title">
+                        <h3>Subject</h3>
+                        <h3>Semester</h3>
+                        <h3>Professor</h3>
+                    </div>
+
                     <div class="added-container">
-                        <p>${subject}</p>
-                        <p>${semester}</p>
-                        <p>${professor}</p>
+         
                     </div>
                 </div>
             </div>
@@ -155,7 +160,7 @@
     </section>
 
     <section class="main-course" >
-       <h1>Engenharia da Computação</h1>
+       <h1>Computer Engeneering</h1>
 
         <div class="container" id="computer-engineering">
 

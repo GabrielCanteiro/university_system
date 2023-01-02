@@ -5,7 +5,7 @@ function addSubject(){
     let getSubject = document.getElementById('subject')
     let getSemester = document.getElementById('semester')
     let getProfessor = document.getElementById('professor')
-    let local = document.getElementById('subjects-added')
+    let local = document.querySelector('.added-container')
     
 
     let course = getCourse.value
@@ -17,7 +17,7 @@ function addSubject(){
     
     let content = 
     `
-    <div class="added-container">
+    <div class="added-course-content">
     <p>${subject}</p>
     <p>${semester}</p>
     <p>${professor}</p>
