@@ -1,18 +1,24 @@
 
 function addStudent(){
-    let getname = document.getElementById('name')
-    let getbirthDate = document.getElementById('birth-date')
-    let getgender = document.getElementById('gender')
-    let getcourse = document.getElementById('course')
-    let getra = document.getElementById('r-a')
+    let getName = document.getElementById('name')
+    let getBirthDate = document.getElementById('birth-date')
+    let getGender = document.getElementById('gender')
+    let getCourse = document.getElementById('course')
+    let getRA = document.getElementById('r-a')
+
     let studentInfo = document.querySelector('.students-container')
 
-    let name = getname.value
-    let birthDate = getbirthDate.value
-    let ra = getra.value
+    let name = getName.value
+    let birthDate = getBirthDate.value
+    let ra = getRA.value
 
-    let genderIndex = getgender.selectedIndex
-    let gender = getgender.options[genderIndex].text
+    let courseIndex = getCourse.selectedIndex
+    let course = getCourse.options[courseIndex].text
+
+    let genderIndex = getGender.selectedIndex
+    let gender = getGender.options[genderIndex].text
+
+
 
 
     let content = `
@@ -38,8 +44,15 @@ function addStudent(){
         studentInfo.appendChild(add)
 
         alert(`Registro feito com sucesso`)
+        
+        let name = getName.value = ''
+        let birthDate = getBirthDate.value = ''
+        let ra = getRA.value = ''
+        let gender = getGender.options[genderIndex].text  
+        let course = getCourse.options[courseIndex].text 
+    
     }
-    
-    
 
 }
+
+//TODO PDIR AJUDA PARA LIMPAR OS OPTIONS

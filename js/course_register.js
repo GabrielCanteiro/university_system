@@ -1,6 +1,7 @@
 
 function addSubject(){
     const addSubjectButton = document.getElementById('add-subject')
+
     const getCourse = document.getElementById('course')
     const getSubject = document.getElementById('subject')
     const getSemester = document.getElementById('semester')
@@ -34,3 +35,7 @@ function addSubject(){
 
 }
 
+function addSideBar(){
+
+    
+}

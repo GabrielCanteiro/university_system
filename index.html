@@ -45,7 +45,7 @@
                 <input type="text" required id="name">
 
                 <label for="birth date">Birth Date</label>
-                <input type="date" required id="birth-date">
+                <input type="date" required id="birth-date campoData">
                 
                 <label for="gender">Gender</label>
                 <select name="gender" id="gender" required>
@@ -79,7 +79,7 @@
                 <input type="text" required id="professor-name">
 
                 <label for="birth date">Birth Date</label>
-                <input type="date" required id="professor-birth-date" >
+                <input type="date" required id="professor-birth-date campoData" >
                 
                 <label for="gender">Gender</label>
                 <select name="gender" id="professor-gender" required >
@@ -108,7 +108,7 @@
         </div>
     </section>
 
-    <section class="main-register-course">
+    <section class="main-register-course" style="display: block;">
         
         
         <div class="register-container" >
@@ -138,8 +138,11 @@
             </div>
 
                 <div class="subjects-added" id="subjects-added">
-
-
+                    <div class="added-container">
+                        <p>${subject}</p>
+                        <p>${semester}</p>
+                        <p>${professor}</p>
+                    </div>
                 </div>
             </div>
 
