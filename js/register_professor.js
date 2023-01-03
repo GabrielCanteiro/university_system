@@ -8,6 +8,8 @@ function addProfessor(){
 
     let getCourse = document.getElementById('professor-course')
     let courseIndex = getCourse.selectedIndex
+    let course = getCourse.options[courseIndex].text
+
     
     let getSemester = document.getElementById('professor-semester')
     let getSalary = document.getElementById('professor-salary')
@@ -15,7 +17,6 @@ function addProfessor(){
 
     let name = getName.value
     let birthDate = getBirthDate.value
-    let course = getCourse.options[genderIndex].text
     let semester = getSemester.value
     let salary = getSalary.value
     let subject = getSubject.value
@@ -45,7 +46,11 @@ function addProfessor(){
 
 
     if(name === '' || birthDate === '' || course === '' || gender === '' || subject === '' || salary === '' || semester === '' ){
-        alert('fill all the fields')
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Fill all the fields!',
+          })
 
     }else{
         let add = document.createElement('div')
@@ -56,7 +61,25 @@ function addProfessor(){
         addProfessorOption.innerHTML = professorOption
         professorOptionLocal.appendChild(addProfessorOption)
 
-        alert('adicionado com sucesso')
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Professor Registered',
+            showConfirmButton: false,
+            timer: 1500
+          })
+
+
+        let name = getName.value = ''
+        let birthDate = getBirthDate.value = ''
+        let semester = getSemester.value = ''
+        let salary = getSalary.value = ''
+        let subject = getSubject.value = ''
+        let course = getCourse.options[courseIndex].text = ''
+        let gender = getGender.options[genderIndex].text = ''
+
+
+
     }
 
 }

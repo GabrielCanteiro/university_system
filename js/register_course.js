@@ -1,5 +1,6 @@
 
 
+
 function addSubject(){
     let getCourse = document.querySelector('.course #course')
     let getSubject = document.getElementById('subject')
@@ -24,15 +25,50 @@ function addSubject(){
     </div>
     `
 
+    let localLimit = document.querySelectorAll('.added-course-content')
+    let count = localLimit.length
+    
 
     if(course === '' || subject === '' || semester === '' || professor === ''){
-        alert('fill all the fields')
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Fill all the fields!',
+          })
+
+    }else if(count >= 50){
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Subject limit exceeded',
+      })
 
     }else{
-        let added = document.createElement('div')
-        added.innerHTML = content
-        local.appendChild(added)
+
+      let added = document.createElement('div')
+      added.innerHTML = content
+      local.appendChild(added)
+
+      const Toast = Swal.mixin({
+          toast: true,
+          position: 'top-end',
+          showConfirmButton: false,
+          timer: 1000,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+          }
+        })
+        
+        Toast.fire({
+          icon: 'success',
+          title: 'Subject Registered'
+        })
+
+
+      let subject = getSubject.value = ''
+      let semester = getSemester.value = ''
+      let professor = getProfessor.options[professorIndex].text = ''
     }
 }
-
-

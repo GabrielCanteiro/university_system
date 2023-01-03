@@ -7,7 +7,9 @@
     <title>University System</title>
     <link rel="stylesheet" href="/styles/styles.css">
 
-    <script src="https://kit.fontawesome.com/ca918be759.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/ca918be759.js" crossorigin="anonymous"></script><!--FONT AWSOME-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.16/dist/sweetalert2.all.min.js"></script><!--SWEET ALERT-->
+
 </head>
 <body>
 
@@ -23,7 +25,7 @@
                     <div class="button">Register</div>
                         <div class="dropdwon">
                             <p id="resgiterStudent" onclick="showRegisterStudents()">Students</p>
-                            <p id="professorRegister" onclick="showRegisterprofessors()">professors</p>
+                            <p id="professorRegister" onclick="showRegisterprofessors()">Professors</p>
                             <p id="courseRegister" onclick="showRegisterCourse()">Course</p>
                         </div>
                 </div>        
@@ -42,10 +44,10 @@
             <h1>Student Register</h1>
             <form action="">
                 <label for="name">Full Name</label>
-                <input type="text" required id="name">
+                <input type="text" required id="name" maxlength="30" onkeypress="return lettersOnly(event)">
 
                 <label for="birth date">Birth Date</label>
-                <input type="date" required id="birth-date campoData">
+                <input type="date" required id="birth-date">
                 
                 <label for="gender">Gender</label>
                 <select name="gender" id="gender" required>
@@ -76,10 +78,10 @@
             <h1>Professor Register</h1>
             <form action="">
                 <label for="name">Full Name</label>
-                <input type="text" required id="professor-name">
+                <input type="text" required id="professor-name" maxlength="30" onkeypress="return lettersOnly(event)">
 
                 <label for="birth date">Birth Date</label>
-                <input type="date" required id="professor-birth-date campoData" >
+                <input type="date" required id="professor-birth-date" >
                 
                 <label for="gender">Gender</label>
                 <select name="gender" id="professor-gender" required >
@@ -119,11 +121,11 @@
                 <div class="subject">
                     <div class="course">
                         <label for="name">Course</label>
-                        <input type="text" id="course" required autocomplete="off">     
+                        <input type="text" id="course" required autocomplete="off" maxlength="30" onkeypress="return lettersOnly(event)">     
                     </div>
     
                     <label for="subject">Subject</label>
-                    <input type="text" id="subject" required autocomplete="off">
+                    <input type="text" id="subject" required autocomplete="off" maxlength="30" onkeypress="return lettersOnly(event)">
          
                     <label for="semester">Subject Semester</label>
                     <input type="number" name="semester" id="semester" required autocomplete="off">
@@ -132,7 +134,16 @@
                     <select name="professor" id="professor" required autocomplete="off">
                      <option value=""></option>
                      <option value="">Alberto</option>
-                     <!--TODO ADICIONAR PROFESSORES CADASTRADOS-->
+                     <option value="">Alberto</option>
+                     <option value="">Alberto</option>
+                     <option value="">Alberto</option>
+                     <option value="">Alberto</option>
+                     <option value="">Alberto</option>
+                     <option value="">Alberto</option>
+                     <option value="">Alberto</option>
+                     <option value="">Alberto</option>
+                     <option value="">Alberto</option>
+                     <option value="">Alberto</option>
                     </select>
                     <button id="add-subject" onclick="addSubject()">Add Subject</button> 
             </div>
@@ -199,7 +210,7 @@
                             <p>20/07/2000</p>
                             <p>7889</p>
                             <p>8.5</p>
-                            <i class="fa-solid fa-trash-can"></i>
+                            <i id="trash" class="fa-solid fa-trash-can"></i>
                     </div>
                     <div class="students">
                         <div class="profile-line">
@@ -210,7 +221,7 @@
                             <p>20/07/2000</p>
                             <p>7889</p>
                             <p>8.5</p>
-                            <i class="fa-solid fa-trash-can"></i>
+                            <i id="trash" class="fa-solid fa-trash-can"></i>
                     </div>
 
 
@@ -247,7 +258,7 @@
                             <p>20/07/2000</p>
                             <p>7889</p>
                             <p>8.5</p>
-                            <i class="fa-solid fa-trash-can"></i>
+                            <i id="trash" class="fa-solid fa-trash-can"></i>
                     </div>
                     <div class="students">
                         <div class="profile-line">
@@ -258,7 +269,7 @@
                             <p>20/07/2000</p>
                             <p>7889</p>
                             <p>8.5</p>
-                            <i class="fa-solid fa-trash-can"></i>
+                            <i id="trash" class="fa-solid fa-trash-can"></i>
                     </div>
 
 
@@ -283,5 +294,6 @@
 <script src="/js/register_course.js"></script>
 <script src="/js/register_student.js"></script>
 <script src="/js/register_professor.js"></script>
+<script src="/js/course.js"></script>
 </body>
 </html>

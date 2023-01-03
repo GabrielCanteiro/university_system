@@ -1,4 +1,3 @@
-
 function addStudent(){
     let getName = document.getElementById('name')
     let getBirthDate = document.getElementById('birth-date')
@@ -18,9 +17,6 @@ function addStudent(){
     let genderIndex = getGender.selectedIndex
     let gender = getGender.options[genderIndex].text
 
-
-
-
     let content = `
 
     <div class="students">
@@ -32,24 +28,39 @@ function addStudent(){
         <p>${birthDate}</p>
         <p>${ra}</p>
         <p>8.5</p>
-        <i class="fa-solid fa-trash-can"></i>
+        <i id="trash" class="fa-solid fa-trash-can"></i>
     </div>
     `
 
+    console.log()
+
     if(name === '' || birthDate === '' || ra === '' || gender === ''){
-        alert('fill all the fields')
+       
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Fill all the fields!',
+          })
+    
+
     }else{
         let add = document.createElement('div')
         add.innerHTML = content
         studentInfo.appendChild(add)
 
-        alert(`Registro feito com sucesso`)
-        
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Student Registered',
+            showConfirmButton: false,
+            timer: 1500
+          })
+
         let name = getName.value = ''
         let birthDate = getBirthDate.value = ''
         let ra = getRA.value = ''
-        let gender = getGender.options[genderIndex].text  
-        let course = getCourse.options[courseIndex].text 
+        let gender = getGender.options[genderIndex].text = ''
+        let course = getCourse.options[courseIndex].text = ''
     
     }
 
