@@ -34,7 +34,7 @@ function addProfessor(){
     <div class="subjects-line" >
     <div class="profile-line">
         <i class="fa-solid fa-chalkboard-user"></i>
-        <p>${name}</p> <!--TODO LIMITAR CARACTERES-->
+        <p>${name}</p>
     </div>
     <p>${subject}</p>
     <p>$ ${salary}</p>
@@ -75,8 +75,9 @@ function addProfessor(){
         let semester = getSemester.value = ''
         let salary = getSalary.value = ''
         let subject = getSubject.value = ''
-        let course = getCourse.options[courseIndex].text = ''
-        let gender = getGender.options[genderIndex].text = ''
+        let course = getCourse.value = courseIndex[0]
+        let gender = getGender.value = genderIndex[0]
+
 
 
 

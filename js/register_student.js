@@ -59,11 +59,24 @@ function addStudent(){
         let name = getName.value = ''
         let birthDate = getBirthDate.value = ''
         let ra = getRA.value = ''
-        let gender = getGender.options[genderIndex].text = ''
-        let course = getCourse.options[courseIndex].text = ''
-    
+        let gender = getGender.value = genderIndex[0]
+        let course = getCourse.value = courseIndex[0]
+
+
+        /*REMOVE STUDENT*/
+        let trash = document.querySelectorAll('#trash')
+        console.log(trash)
+        for (let i = 0; i < trash.length; i++) {
+   
+            trash[i].addEventListener("click", (e)=>{
+            let trashParent = e.target.parentElement
+            console.log(trash[i])
+        
+            trashParent.remove()
+        
+          });
+        }
     }
 
 }
 
-//TODO PDIR AJUDA PARA LIMPAR OS OPTIONS

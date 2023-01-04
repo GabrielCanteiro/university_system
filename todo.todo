@@ -29,7 +29,7 @@ Apresentação da página:
 de novos dados e também para edição; EM ANDAMENTO-------------------
 
 • Deve ser possível visualizar componentes com erro e a forma (display) como os possíveis
-erros serão apresentados. IMPLEMENTAR NAS TELAS DE REGISTRO--------------------------
+erros serão apresentados. OK----------------
 
 
 Notas:
@@ -37,12 +37,11 @@ Notas:
 O projeto deve ser criado no Git em que, quando abrimos no browser, consigamos navegar.Teras
 que definir o layout da página, fazer de forma compilada ou sem limite de páginas Html, de forma
 
-TODO COMO ZERAR OS INPUTS SEM REMOVER OS CAMPOS SELECT
 
  TODO NENHUMA TELA POSSUI FOCUS NOS INPUTS
  TODO PADRONIZAR EXIBIÇÃO DE DADOS DO TIPO DATA / CURRENCY
  TODO COURSES EXIBE APENAS ENGENHARIA DA COMPUTAÇÃO
- TODO EXCLUIR ALUNO NÃO FUNCIONA
+ TODO EXCLUIR ALUNO NÃO FUNCIONA 
 
 MELHORIAS:
  TODO CRIAR TABELAS PARA EXIBIR ESTUDANTES, PROFESSORES E CURSOS ANTES DA  TELA DE CADASTRO E UTILIZAR MODAL OU NOVA PAGINA PARA OS CRUD (PARTICULAMENTE EU CREIO QUE MODAL SEJA MAIS INTERESSANTE)

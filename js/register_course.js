@@ -69,6 +69,7 @@ function addSubject(){
 
       let subject = getSubject.value = ''
       let semester = getSemester.value = ''
-      let professor = getProfessor.options[professorIndex].text = ''
+      let professor = getProfessor.value = professorIndex[0]
+
     }
 }
