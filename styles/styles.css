@@ -105,11 +105,6 @@ body{
     max-width: 50%;
 }
 
-.register-container form input,select{
-    border: none;
-    border-bottom: 1px solid black;
-    outline: none;
-}
 
 .register-container form select{
     cursor: pointer;
@@ -123,6 +118,29 @@ body{
 .register-container button{
     margin-top: 5vh;
     height: 3vh;
+
+}
+/*INPUTS*/
+input, select{
+    width: 40%;
+    background-color: transparent;
+    border: none;
+    outline: 0;
+    border-bottom: 2px solid #8b8b8b;
+}
+
+input:focus{
+    border-image: linear-gradient(to right, #11998e, #38ef7d);
+    border-image-slice: 1;
+    width: 50%;
+    transition: .3s;
+}
+
+select:focus{
+    border-image: linear-gradient(to right, #11998e, #38ef7d);
+    border-image-slice: 3;
+    width: 50%;
+    transition: .3s;
 
 }
 
@@ -156,12 +174,7 @@ body{
     width: 40%;
 }
 
-.subject input, select, button{
-    width: 60%;
-    border: 0;
-    border-bottom: 1px solid black;
-    outline: 0;
-}
+
 
 .subject button,.register-container button{
     border: 0;
