@@ -21,7 +21,7 @@ function addProfessor(){
     let salary = getSalary.value
     let subject = getSubject.value
 
-    let local = document.getElementById('computer-engineering')
+    let local = document.getElementById('cloud-computing')
     let professorOptionLocal = document.querySelector('.subject #professor')
 
 
@@ -39,7 +39,7 @@ function addProfessor(){
     <p>${subject}</p>
     <p>$ ${salary}</p>
     <p>${birthDate}</p>
-    <i class="fa-solid fa-chevron-down arrow"></i>
+    <i class="fa-solid fa-chevron-down arrow2"></i>
     </div>
 
     `
@@ -85,3 +85,16 @@ function addProfessor(){
 
 }
     
+let arrow2 = document.querySelectorAll(".arrow2");
+for (var i = 0; i < arrow2.length; i++) {
+   
+  arrow2[i].addEventListener("click", (e)=>{
+   let arrow2Parent = e.target.parentElement.nextElementSibling
+    console.log(arrow2)
+
+ arrow2Parent.classList.toggle("visible-main");
+  });
+
+
+}
+
