@@ -6,6 +6,7 @@ const registerprofessors = document.querySelector('.main-register-professor')
 const registerCourses = document.querySelector('.main-register-course')
 
 const course = document.querySelector('.main-course')
+const 
 
 const students = document.querySelector('.students-container')
 
@@ -27,7 +28,7 @@ function showRegisterStudents(){
 }
 
 
-function showRegisterprofessors(){
+function showRegisterProfessors(){
     remove()
     registerprofessors.classList.add('visible-main')
 }
@@ -51,6 +52,12 @@ function showStudents(){
     students.classList.add('visible-main')
 }
 
+function showComputerScience(){
+    remove()
+    course.classList.add('visible-main')
+
+}
+
 
 function lettersOnly(evt) {
     evt = (evt) ? evt : event;
@@ -62,3 +69,4 @@ function lettersOnly(evt) {
     }
     return true;
 }
+
