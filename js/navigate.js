@@ -5,10 +5,12 @@ const registerStudents = document.querySelector('.main-register-student')
 const registerprofessors = document.querySelector('.main-register-professor')
 const registerCourses = document.querySelector('.main-register-course')
 
-const course = document.querySelector('.main-course')
-const 
-
+const course = document.querySelector('.cloud-computing')
+const computerScience = document.querySelector('.computer-science')
 const students = document.querySelector('.students-container')
+const computing = document.querySelector('.computing')
+const cyberSec = document.querySelector('.cyber-security')
+const dashboard = document.querySelector('.dashboard')
 
 function remove(){
     let el = document.getElementsByClassName('visible-main')
@@ -20,6 +22,8 @@ function remove(){
        
     }
 }
+
+showHome()
 
 function showRegisterStudents(){
     remove()
@@ -46,6 +50,8 @@ function showCourse(){
 
 function showHome(){
     remove()
+    dashboard.classList.add('visible-main')
+
 }
 
 function showStudents(){
@@ -54,9 +60,21 @@ function showStudents(){
 
 function showComputerScience(){
     remove()
-    course.classList.add('visible-main')
+    computerScience.classList.add('visible-main')
+}
+
+function showComputing() {
+    remove()
+    computing.classList.add('visible-main')
+}
+
+function showCyberSec( ) {
+    remove()
+    cyberSec.classList.add('visible-main')
 
 }
+
+
 
 
 function lettersOnly(evt) {

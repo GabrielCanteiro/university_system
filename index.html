@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>University System</title>
-    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
 
     <script src="https://kit.fontawesome.com/ca918be759.js" crossorigin="anonymous"></script><!--FONT AWSOME-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.16/dist/sweetalert2.all.min.js"></script><!--SWEET ALERT-->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
-    <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
 
@@ -26,10 +26,10 @@
           <li>
             <a href="#">
               <i class='bx bx-grid-alt' ></i>
-              <span class="link_name">Dashboard</span>
+              <span class="link_name" onclick="showHome()">Dashboard</span>
             </a>
             <ul class="sub-menu blank">
-              <li onclick="showHome()"><a class="link_name" href="#">Dashboard</a></li>
+              <li onclick="showHome()"><a class="link_name">Dashboard</a></li>
             </ul>
           </li>
           <li>
@@ -56,15 +56,11 @@
               <i class='bx bxs-chevron-down arrow' ></i>
             </div>
             <ul class="sub-menu">
-              <li><a class="link_name" href="#">Courses</a></li>
-              <li onclick="showCourse()"><a href="#">Cloud Computing</a></li>
-              <li><a href="">Computer Science</a></li>
-              <li><a href="">Computing</a></li>
-              <li><a href="">Cyber Security</a></li>
-              <li><a href="">Electronic & Software</a></li>
-              <li><a href="">Industrial Mathematics</a></li>
-              <li><a href="">Mathematical Sciences</a></li>
-              <li><a href="">Networking Technologies</a></li>
+              <li><a class="link_name" >Courses</a></li>
+              <li onclick="showCourse()"><a >Cloud Computing</a></li>
+              <li onclick="showComputerScience()"><a >Computer Science</a></li>
+              <li onclick="showComputing()"><a >Computing</a></li>
+              <li onclick="showCyberSec()"><a >Cyber Security</a></li>
             </ul>
           </li>
           <li>
@@ -99,6 +95,44 @@
 
 
     <!--SIDEBAR-->    
+
+    <section class="dashboard" >
+
+        <div class="top">
+            <div class="card-top">
+                <h1>4</h1>
+                <h4>Courses</h4>
+            </div>
+            <div class="card-top">
+                <h1>22</h1>
+                <h4>Professors</h4>
+            </div>
+            <div class="card-top">
+                <h1>68</h1>
+                <h4>Student</h4>
+            </div>
+        </div>
+        
+
+        <div class="bot">
+            <div class="card-bot" onclick="showCourse()">
+                <h1>Cloud Computing</h1>
+            </div>
+            <div class="card-bot" onclick="showComputerScience()">
+                <h1>Computer Science</h1>
+            </div>
+            <div class="card-bot" onclick="showComputing()">
+                <h1>Computing</h1>
+            </div>
+            <div class="card-bot" onclick="showCyberSec()">
+                <h1>Cyber Security</h1>
+            </div>
+        </div>
+
+
+    </section>
+
+
     <section class="main-register-student" >
         <div class="register-container ">
             <h1>Student Register</h1>
@@ -124,10 +158,6 @@
                     <option value="">Computer Science</option>
                     <option value="">Computing </option>
                     <option value="">Cyber Security</option>
-                    <option value="">Electronic & Software</option>
-                    <option value="">Industrial Mathematics</option>
-                    <option value="">Mathematical Sciences </option>
-                    <option value="">Networking Technologies</option>
                 </select>
 
                 <label for="RA">RA</label>
@@ -168,10 +198,6 @@
                     <option value="">Computer Science</option>
                     <option value="">Computing </option>
                     <option value="">Cyber Security</option>
-                    <option value="">Electronic & Software</option>
-                    <option value="">Industrial Mathematics</option>
-                    <option value="">Mathematical Sciences </option>
-                    <option value="">Networking Technologies</option>
                 </select>
 
                 <label for="subject">Subject</label>
@@ -258,7 +284,7 @@
         </div>
     </section>
 
-    <section class="main-course">
+    <section class="main-course cloud-computing">
        <h1>Cloud Computer </h1>
 
         <div class="container" id="cloud-computer">
@@ -1151,7 +1177,7 @@
 
     </section>
 
-    <section class="main-course">
+    <section class="main-course computer-science">
         <h1>Computer Science</h1>
  
          <div class="container" id="cloud-computer">
@@ -1294,7 +1320,1792 @@
                          <i class="fa-solid fa-chalkboard-user"></i>
                          <p>Fernando Calebe Gonçalves</p> 
                      </div>
-                     <p>Critical Skills Development</p>
+                     <p>Maths</p>
+                     <p>$ 1.969,00</p>
+                     <p>01/01/1991</p>
+                     <i class="fa-solid fa-chevron-down arrow2"></i>
+                 </div>
+ 
+                 <div class="students-container" >
+                     <div class="students-title">
+                         <p>Student</p>
+                         <p>Birth Date</p>
+                         <p>RA</p>
+                         <p>Score</p>
+                     </div>
+ 
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Gabriel Canteiro Cruz</p>
+                         </div>
+ 
+                             <p>20/07/2000</p>
+                             <p>0001</p>
+                             <p>8.5</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Thiago Renato Nascimento</p>
+                         </div>
+ 
+                             <p>03/01/1979</p>
+                             <p>0002</p>
+                             <p>7.5</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+ 
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Ester Mirella Aline Mendes</p>
+                         </div>
+ 
+                             <p>03/01/1950</p>
+                             <p>0003</p>
+                             <p>8</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Guilherme Lucca Silveira</p>
+                         </div>
+ 
+                             <p>03/01/1968</p>
+                             <p>0005</p>
+                             <p>5.9</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Bryan Cauã Moraes</p>
+                         </div>
+ 
+                             <p>04/01/2002</p>
+                             <p>0006</p>
+                             <p>4.6</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Camila Vitória Ester Martins</p>
+                         </div>
+ 
+                             <p>02/01/1972</p>
+                             <p>0007</p>
+                             <p>7.4</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Martin Yago Osvaldo Ribeiro</p>
+                         </div>
+ 
+                             <p>01/01/1969</p>
+                             <p>0008</p>
+                             <p>6.2</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Yuri Paulo Rodrigues</p>
+                         </div>
+ 
+                             <p>03/01/1974</p>
+                             <p>0009</p>
+                             <p>8.5</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Lucca Alexandre Cavalcanti</p>
+                         </div>
+ 
+                             <p>04/01/1969</p>
+                             <p>0010</p>
+                             <p>9.9</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+ 
+ 
+                 </div>
+             </div>
+ 
+             <div class="subjects">
+                 <div class="subjects-line" >
+                     <div class="profile-line">
+                         <i class="fa-solid fa-chalkboard-user"></i>
+                         <p>Laís Sarah Marcela Nascimento</p> 
+                     </div>
+                     <p>Business & Information Systems</p>
+                     <p>$ 3.000,00</p>
+                     <p>01/01/1991</p>
+                     <i class="fa-solid fa-chevron-down arrow2"></i>
+                 </div>
+ 
+                 <div class="students-container" >
+                     <div class="students-title">
+                         <p>Student</p>
+                         <p>Birth Date</p>
+                         <p>RA</p>
+                         <p>Score</p>
+                     </div>
+ 
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Gabriel Canteiro Cruz</p>
+                         </div>
+ 
+                             <p>20/07/2000</p>
+                             <p>0001</p>
+                             <p>8.5</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Thiago Renato Nascimento</p>
+                         </div>
+ 
+                             <p>03/01/1979</p>
+                             <p>0002</p>
+                             <p>7.5</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+ 
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Ester Mirella Aline Mendes</p>
+                         </div>
+ 
+                             <p>03/01/1950</p>
+                             <p>0003</p>
+                             <p>8</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Guilherme Lucca Silveira</p>
+                         </div>
+ 
+                             <p>03/01/1968</p>
+                             <p>0005</p>
+                             <p>5.9</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Bryan Cauã Moraes</p>
+                         </div>
+ 
+                             <p>04/01/2002</p>
+                             <p>0006</p>
+                             <p>4.6</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Camila Vitória Ester Martins</p>
+                         </div>
+ 
+                             <p>02/01/1972</p>
+                             <p>0007</p>
+                             <p>7.4</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Martin Yago Osvaldo Ribeiro</p>
+                         </div>
+ 
+                             <p>01/01/1969</p>
+                             <p>0008</p>
+                             <p>6.2</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Yuri Paulo Rodrigues</p>
+                         </div>
+ 
+                             <p>03/01/1974</p>
+                             <p>0009</p>
+                             <p>8.5</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Lucca Alexandre Cavalcanti</p>
+                         </div>
+ 
+                             <p>04/01/1969</p>
+                             <p>0010</p>
+                             <p>9.9</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+ 
+ 
+                 </div>
+             </div>
+ 
+             <div class="subjects">
+                 <div class="subjects-line" >
+                     <div class="profile-line">
+                         <i class="fa-solid fa-chalkboard-user"></i>
+                         <p>Theo Davi Ribeiro</p> 
+                     </div>
+                     <p>Discrete Mathematics 1</p>
+                     <p>$ 2.800,00</p>
+                     <p>01/01/1991</p>
+                     <i class="fa-solid fa-chevron-down arrow2"></i>
+                 </div>
+ 
+                 <div class="students-container" >
+                     <div class="students-title">
+                         <p>Student</p>
+                         <p>Birth Date</p>
+                         <p>RA</p>
+                         <p>Score</p>
+                     </div>
+ 
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Gabriel Canteiro Cruz</p>
+                         </div>
+ 
+                             <p>20/07/2000</p>
+                             <p>0001</p>
+                             <p>8.5</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Thiago Renato Nascimento</p>
+                         </div>
+ 
+                             <p>03/01/1979</p>
+                             <p>0002</p>
+                             <p>7.5</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+ 
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Ester Mirella Aline Mendes</p>
+                         </div>
+ 
+                             <p>03/01/1950</p>
+                             <p>0003</p>
+                             <p>8</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Guilherme Lucca Silveira</p>
+                         </div>
+ 
+                             <p>03/01/1968</p>
+                             <p>0005</p>
+                             <p>5.9</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Bryan Cauã Moraes</p>
+                         </div>
+ 
+                             <p>04/01/2002</p>
+                             <p>0006</p>
+                             <p>4.6</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Camila Vitória Ester Martins</p>
+                         </div>
+ 
+                             <p>02/01/1972</p>
+                             <p>0007</p>
+                             <p>7.4</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Martin Yago Osvaldo Ribeiro</p>
+                         </div>
+ 
+                             <p>01/01/1969</p>
+                             <p>0008</p>
+                             <p>6.2</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Yuri Paulo Rodrigues</p>
+                         </div>
+ 
+                             <p>03/01/1974</p>
+                             <p>0009</p>
+                             <p>8.5</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Lucca Alexandre Cavalcanti</p>
+                         </div>
+ 
+                             <p>04/01/1969</p>
+                             <p>0010</p>
+                             <p>9.9</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+ 
+ 
+                 </div>
+             </div>
+ 
+             <div class="subjects">
+                 <div class="subjects-line" >
+                     <div class="profile-line">
+                         <i class="fa-solid fa-chalkboard-user"></i>
+                         <p>Esther Gabriela Lopes</p> 
+                     </div>
+                     <p>Software Development 1</p>
+                     <p>$ 2.750,00</p>
+                     <p>01/01/1991</p>
+                     <i class="fa-solid fa-chevron-down arrow2"></i>
+                 </div>
+ 
+                 <div class="students-container" >
+                     <div class="students-title">
+                         <p>Student</p>
+                         <p>Birth Date</p>
+                         <p>RA</p>
+                         <p>Score</p>
+                     </div>
+ 
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Gabriel Canteiro Cruz</p>
+                         </div>
+ 
+                             <p>20/07/2000</p>
+                             <p>0001</p>
+                             <p>8.5</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Thiago Renato Nascimento</p>
+                         </div>
+ 
+                             <p>03/01/1979</p>
+                             <p>0002</p>
+                             <p>7.5</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+ 
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Ester Mirella Aline Mendes</p>
+                         </div>
+ 
+                             <p>03/01/1950</p>
+                             <p>0003</p>
+                             <p>8</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Guilherme Lucca Silveira</p>
+                         </div>
+ 
+                             <p>03/01/1968</p>
+                             <p>0005</p>
+                             <p>5.9</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Bryan Cauã Moraes</p>
+                         </div>
+ 
+                             <p>04/01/2002</p>
+                             <p>0006</p>
+                             <p>4.6</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Camila Vitória Ester Martins</p>
+                         </div>
+ 
+                             <p>02/01/1972</p>
+                             <p>0007</p>
+                             <p>7.4</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Martin Yago Osvaldo Ribeiro</p>
+                         </div>
+ 
+                             <p>01/01/1969</p>
+                             <p>0008</p>
+                             <p>6.2</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Yuri Paulo Rodrigues</p>
+                         </div>
+ 
+                             <p>03/01/1974</p>
+                             <p>0009</p>
+                             <p>8.5</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Lucca Alexandre Cavalcanti</p>
+                         </div>
+ 
+                             <p>04/01/1969</p>
+                             <p>0010</p>
+                             <p>9.9</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+ 
+ 
+                 </div>
+             </div>
+ 
+             <div class="subjects">
+                 <div class="subjects-line" >
+                     <div class="profile-line">
+                         <i class="fa-solid fa-chalkboard-user"></i>
+                         <p>Caleb Otávio de Paula</p> 
+                     </div>
+                     <p>Visual Design & User Experience</p>
+                     <p>$ 2.420,00</p>
+                     <p>01/01/1991</p>
+                     <i class="fa-solid fa-chevron-down arrow2"></i>
+                 </div>
+ 
+                 <div class="students-container" >
+                     <div class="students-title">
+                         <p>Student</p>
+                         <p>Birth Date</p>
+                         <p>RA</p>
+                         <p>Score</p>
+                     </div>
+ 
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Gabriel Canteiro Cruz</p>
+                         </div>
+ 
+                             <p>20/07/2000</p>
+                             <p>0001</p>
+                             <p>8.5</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Thiago Renato Nascimento</p>
+                         </div>
+ 
+                             <p>03/01/1979</p>
+                             <p>0002</p>
+                             <p>7.5</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+ 
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Ester Mirella Aline Mendes</p>
+                         </div>
+ 
+                             <p>03/01/1950</p>
+                             <p>0003</p>
+                             <p>8</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Guilherme Lucca Silveira</p>
+                         </div>
+ 
+                             <p>03/01/1968</p>
+                             <p>0005</p>
+                             <p>5.9</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Bryan Cauã Moraes</p>
+                         </div>
+ 
+                             <p>04/01/2002</p>
+                             <p>0006</p>
+                             <p>4.6</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Camila Vitória Ester Martins</p>
+                         </div>
+ 
+                             <p>02/01/1972</p>
+                             <p>0007</p>
+                             <p>7.4</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Martin Yago Osvaldo Ribeiro</p>
+                         </div>
+ 
+                             <p>01/01/1969</p>
+                             <p>0008</p>
+                             <p>6.2</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Yuri Paulo Rodrigues</p>
+                         </div>
+ 
+                             <p>03/01/1974</p>
+                             <p>0009</p>
+                             <p>8.5</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Lucca Alexandre Cavalcanti</p>
+                         </div>
+ 
+                             <p>04/01/1969</p>
+                             <p>0010</p>
+                             <p>9.9</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+ 
+ 
+                 </div>
+             </div>
+ 
+             <div class="subjects">
+                 <div class="subjects-line" >
+                     <div class="profile-line">
+                         <i class="fa-solid fa-chalkboard-user"></i>
+                         <p>Stefany Hadassa Letícia Porto</p> 
+                     </div>
+                     <p>Social Media Communications</p>
+                     <p>$ 3.300,00</p>
+                     <p>01/01/1991</p>
+                     <i class="fa-solid fa-chevron-down arrow2"></i>
+                 </div>
+ 
+                 <div class="students-container" >
+                     <div class="students-title">
+                         <p>Student</p>
+                         <p>Birth Date</p>
+                         <p>RA</p>
+                         <p>Score</p>
+                     </div>
+ 
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Gabriel Canteiro Cruz</p>
+                         </div>
+ 
+                             <p>20/07/2000</p>
+                             <p>0001</p>
+                             <p>8.5</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Thiago Renato Nascimento</p>
+                         </div>
+ 
+                             <p>03/01/1979</p>
+                             <p>0002</p>
+                             <p>7.5</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+ 
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Ester Mirella Aline Mendes</p>
+                         </div>
+ 
+                             <p>03/01/1950</p>
+                             <p>0003</p>
+                             <p>8</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Guilherme Lucca Silveira</p>
+                         </div>
+ 
+                             <p>03/01/1968</p>
+                             <p>0005</p>
+                             <p>5.9</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Bryan Cauã Moraes</p>
+                         </div>
+ 
+                             <p>04/01/2002</p>
+                             <p>0006</p>
+                             <p>4.6</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Camila Vitória Ester Martins</p>
+                         </div>
+ 
+                             <p>02/01/1972</p>
+                             <p>0007</p>
+                             <p>7.4</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Martin Yago Osvaldo Ribeiro</p>
+                         </div>
+ 
+                             <p>01/01/1969</p>
+                             <p>0008</p>
+                             <p>6.2</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Yuri Paulo Rodrigues</p>
+                         </div>
+ 
+                             <p>03/01/1974</p>
+                             <p>0009</p>
+                             <p>8.5</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Lucca Alexandre Cavalcanti</p>
+                         </div>
+ 
+                             <p>04/01/1969</p>
+                             <p>0010</p>
+                             <p>9.9</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+ 
+ 
+                 </div>
+             </div>
+ 
+             
+         </div><!--container-->
+         
+ 
+     </section>
+
+     <section class="main-course computing">
+        <h1>Computing</h1>
+ 
+         <div class="container" id="cloud-computer">
+ 
+             <div class="title-professor">
+                 <p>Professor</p>
+                 <p>Subject</p>
+                 <p>Salary</p>
+                 <p>Birth Date</p>
+             </div>
+ 
+             <div class="subjects" >
+                 <div class="subjects-line" >
+                     <div class="profile-line">
+                         <i class="fa-solid fa-chalkboard-user"></i>
+                         <p>Ayla Tereza Malu Silveira</p> 
+                     </div>
+                     <p>Computer Architecture</p>
+                     <p>$ 2.500,00</p>
+                     <p>08/07/1983</p>
+                     <i class="fa-solid fa-chevron-down arrow2"></i>
+                 </div>
+                 <div class="students-container" >
+                     <div class="students-title">
+                         <p>Student</p>
+                         <p>Birth Date</p>
+                         <p>RA</p>
+                         <p>Score</p>
+                     </div>
+ 
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Gabriel Canteiro Cruz</p>
+                         </div>
+ 
+                             <p>20/07/2000</p>
+                             <p>0001</p>
+                             <p>8.5</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Thiago Renato Nascimento</p>
+                         </div>
+ 
+                             <p>03/01/1979</p>
+                             <p>0002</p>
+                             <p>7.5</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+ 
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Ester Mirella Aline Mendes</p>
+                         </div>
+ 
+                             <p>03/01/1950</p>
+                             <p>0003</p>
+                             <p>8</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Guilherme Lucca Silveira</p>
+                         </div>
+ 
+                             <p>03/01/1968</p>
+                             <p>0005</p>
+                             <p>5.9</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Bryan Cauã Moraes</p>
+                         </div>
+ 
+                             <p>04/01/2002</p>
+                             <p>0006</p>
+                             <p>4.6</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Camila Vitória Ester Martins</p>
+                         </div>
+ 
+                             <p>02/01/1972</p>
+                             <p>0007</p>
+                             <p>7.4</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Martin Yago Osvaldo Ribeiro</p>
+                         </div>
+ 
+                             <p>01/01/1969</p>
+                             <p>0008</p>
+                             <p>6.2</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Yuri Paulo Rodrigues</p>
+                         </div>
+ 
+                             <p>03/01/1974</p>
+                             <p>0009</p>
+                             <p>8.5</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Lucca Alexandre Cavalcanti</p>
+                         </div>
+ 
+                             <p>04/01/1969</p>
+                             <p>0010</p>
+                             <p>9.9</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+ 
+ 
+ 
+                 </div>
+             </div>
+ 
+             <div class="subjects">
+                 <div class="subjects-line" >
+                     <div class="profile-line">
+                         <i class="fa-solid fa-chalkboard-user"></i>
+                         <p>Fernando Calebe Gonçalves</p> 
+                     </div>
+                     <p>Maths</p>
+                     <p>$ 1.969,00</p>
+                     <p>01/01/1991</p>
+                     <i class="fa-solid fa-chevron-down arrow2"></i>
+                 </div>
+ 
+                 <div class="students-container" >
+                     <div class="students-title">
+                         <p>Student</p>
+                         <p>Birth Date</p>
+                         <p>RA</p>
+                         <p>Score</p>
+                     </div>
+ 
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Gabriel Canteiro Cruz</p>
+                         </div>
+ 
+                             <p>20/07/2000</p>
+                             <p>0001</p>
+                             <p>8.5</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Thiago Renato Nascimento</p>
+                         </div>
+ 
+                             <p>03/01/1979</p>
+                             <p>0002</p>
+                             <p>7.5</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+ 
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Ester Mirella Aline Mendes</p>
+                         </div>
+ 
+                             <p>03/01/1950</p>
+                             <p>0003</p>
+                             <p>8</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Guilherme Lucca Silveira</p>
+                         </div>
+ 
+                             <p>03/01/1968</p>
+                             <p>0005</p>
+                             <p>5.9</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Bryan Cauã Moraes</p>
+                         </div>
+ 
+                             <p>04/01/2002</p>
+                             <p>0006</p>
+                             <p>4.6</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Camila Vitória Ester Martins</p>
+                         </div>
+ 
+                             <p>02/01/1972</p>
+                             <p>0007</p>
+                             <p>7.4</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Martin Yago Osvaldo Ribeiro</p>
+                         </div>
+ 
+                             <p>01/01/1969</p>
+                             <p>0008</p>
+                             <p>6.2</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Yuri Paulo Rodrigues</p>
+                         </div>
+ 
+                             <p>03/01/1974</p>
+                             <p>0009</p>
+                             <p>8.5</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Lucca Alexandre Cavalcanti</p>
+                         </div>
+ 
+                             <p>04/01/1969</p>
+                             <p>0010</p>
+                             <p>9.9</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+ 
+ 
+                 </div>
+             </div>
+ 
+             <div class="subjects">
+                 <div class="subjects-line" >
+                     <div class="profile-line">
+                         <i class="fa-solid fa-chalkboard-user"></i>
+                         <p>Laís Sarah Marcela Nascimento</p> 
+                     </div>
+                     <p>Business & Information Systems</p>
+                     <p>$ 3.000,00</p>
+                     <p>01/01/1991</p>
+                     <i class="fa-solid fa-chevron-down arrow2"></i>
+                 </div>
+ 
+                 <div class="students-container" >
+                     <div class="students-title">
+                         <p>Student</p>
+                         <p>Birth Date</p>
+                         <p>RA</p>
+                         <p>Score</p>
+                     </div>
+ 
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Gabriel Canteiro Cruz</p>
+                         </div>
+ 
+                             <p>20/07/2000</p>
+                             <p>0001</p>
+                             <p>8.5</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Thiago Renato Nascimento</p>
+                         </div>
+ 
+                             <p>03/01/1979</p>
+                             <p>0002</p>
+                             <p>7.5</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+ 
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Ester Mirella Aline Mendes</p>
+                         </div>
+ 
+                             <p>03/01/1950</p>
+                             <p>0003</p>
+                             <p>8</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Guilherme Lucca Silveira</p>
+                         </div>
+ 
+                             <p>03/01/1968</p>
+                             <p>0005</p>
+                             <p>5.9</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Bryan Cauã Moraes</p>
+                         </div>
+ 
+                             <p>04/01/2002</p>
+                             <p>0006</p>
+                             <p>4.6</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Camila Vitória Ester Martins</p>
+                         </div>
+ 
+                             <p>02/01/1972</p>
+                             <p>0007</p>
+                             <p>7.4</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Martin Yago Osvaldo Ribeiro</p>
+                         </div>
+ 
+                             <p>01/01/1969</p>
+                             <p>0008</p>
+                             <p>6.2</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Yuri Paulo Rodrigues</p>
+                         </div>
+ 
+                             <p>03/01/1974</p>
+                             <p>0009</p>
+                             <p>8.5</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Lucca Alexandre Cavalcanti</p>
+                         </div>
+ 
+                             <p>04/01/1969</p>
+                             <p>0010</p>
+                             <p>9.9</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+ 
+ 
+                 </div>
+             </div>
+ 
+             <div class="subjects">
+                 <div class="subjects-line" >
+                     <div class="profile-line">
+                         <i class="fa-solid fa-chalkboard-user"></i>
+                         <p>Theo Davi Ribeiro</p> 
+                     </div>
+                     <p>Discrete Mathematics 1</p>
+                     <p>$ 2.800,00</p>
+                     <p>01/01/1991</p>
+                     <i class="fa-solid fa-chevron-down arrow2"></i>
+                 </div>
+ 
+                 <div class="students-container" >
+                     <div class="students-title">
+                         <p>Student</p>
+                         <p>Birth Date</p>
+                         <p>RA</p>
+                         <p>Score</p>
+                     </div>
+ 
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Gabriel Canteiro Cruz</p>
+                         </div>
+ 
+                             <p>20/07/2000</p>
+                             <p>0001</p>
+                             <p>8.5</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Thiago Renato Nascimento</p>
+                         </div>
+ 
+                             <p>03/01/1979</p>
+                             <p>0002</p>
+                             <p>7.5</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+ 
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Ester Mirella Aline Mendes</p>
+                         </div>
+ 
+                             <p>03/01/1950</p>
+                             <p>0003</p>
+                             <p>8</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Guilherme Lucca Silveira</p>
+                         </div>
+ 
+                             <p>03/01/1968</p>
+                             <p>0005</p>
+                             <p>5.9</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Bryan Cauã Moraes</p>
+                         </div>
+ 
+                             <p>04/01/2002</p>
+                             <p>0006</p>
+                             <p>4.6</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Camila Vitória Ester Martins</p>
+                         </div>
+ 
+                             <p>02/01/1972</p>
+                             <p>0007</p>
+                             <p>7.4</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Martin Yago Osvaldo Ribeiro</p>
+                         </div>
+ 
+                             <p>01/01/1969</p>
+                             <p>0008</p>
+                             <p>6.2</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Yuri Paulo Rodrigues</p>
+                         </div>
+ 
+                             <p>03/01/1974</p>
+                             <p>0009</p>
+                             <p>8.5</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Lucca Alexandre Cavalcanti</p>
+                         </div>
+ 
+                             <p>04/01/1969</p>
+                             <p>0010</p>
+                             <p>9.9</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+ 
+ 
+                 </div>
+             </div>
+ 
+             <div class="subjects">
+                 <div class="subjects-line" >
+                     <div class="profile-line">
+                         <i class="fa-solid fa-chalkboard-user"></i>
+                         <p>Esther Gabriela Lopes</p> 
+                     </div>
+                     <p>Software Development 1</p>
+                     <p>$ 2.750,00</p>
+                     <p>01/01/1991</p>
+                     <i class="fa-solid fa-chevron-down arrow2"></i>
+                 </div>
+ 
+                 <div class="students-container" >
+                     <div class="students-title">
+                         <p>Student</p>
+                         <p>Birth Date</p>
+                         <p>RA</p>
+                         <p>Score</p>
+                     </div>
+ 
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Gabriel Canteiro Cruz</p>
+                         </div>
+ 
+                             <p>20/07/2000</p>
+                             <p>0001</p>
+                             <p>8.5</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Thiago Renato Nascimento</p>
+                         </div>
+ 
+                             <p>03/01/1979</p>
+                             <p>0002</p>
+                             <p>7.5</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+ 
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Ester Mirella Aline Mendes</p>
+                         </div>
+ 
+                             <p>03/01/1950</p>
+                             <p>0003</p>
+                             <p>8</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Guilherme Lucca Silveira</p>
+                         </div>
+ 
+                             <p>03/01/1968</p>
+                             <p>0005</p>
+                             <p>5.9</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Bryan Cauã Moraes</p>
+                         </div>
+ 
+                             <p>04/01/2002</p>
+                             <p>0006</p>
+                             <p>4.6</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Camila Vitória Ester Martins</p>
+                         </div>
+ 
+                             <p>02/01/1972</p>
+                             <p>0007</p>
+                             <p>7.4</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Martin Yago Osvaldo Ribeiro</p>
+                         </div>
+ 
+                             <p>01/01/1969</p>
+                             <p>0008</p>
+                             <p>6.2</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Yuri Paulo Rodrigues</p>
+                         </div>
+ 
+                             <p>03/01/1974</p>
+                             <p>0009</p>
+                             <p>8.5</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Lucca Alexandre Cavalcanti</p>
+                         </div>
+ 
+                             <p>04/01/1969</p>
+                             <p>0010</p>
+                             <p>9.9</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+ 
+ 
+                 </div>
+             </div>
+ 
+             <div class="subjects">
+                 <div class="subjects-line" >
+                     <div class="profile-line">
+                         <i class="fa-solid fa-chalkboard-user"></i>
+                         <p>Caleb Otávio de Paula</p> 
+                     </div>
+                     <p>Visual Design & User Experience</p>
+                     <p>$ 2.420,00</p>
+                     <p>01/01/1991</p>
+                     <i class="fa-solid fa-chevron-down arrow2"></i>
+                 </div>
+ 
+                 <div class="students-container" >
+                     <div class="students-title">
+                         <p>Student</p>
+                         <p>Birth Date</p>
+                         <p>RA</p>
+                         <p>Score</p>
+                     </div>
+ 
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Gabriel Canteiro Cruz</p>
+                         </div>
+ 
+                             <p>20/07/2000</p>
+                             <p>0001</p>
+                             <p>8.5</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Thiago Renato Nascimento</p>
+                         </div>
+ 
+                             <p>03/01/1979</p>
+                             <p>0002</p>
+                             <p>7.5</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+ 
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Ester Mirella Aline Mendes</p>
+                         </div>
+ 
+                             <p>03/01/1950</p>
+                             <p>0003</p>
+                             <p>8</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Guilherme Lucca Silveira</p>
+                         </div>
+ 
+                             <p>03/01/1968</p>
+                             <p>0005</p>
+                             <p>5.9</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Bryan Cauã Moraes</p>
+                         </div>
+ 
+                             <p>04/01/2002</p>
+                             <p>0006</p>
+                             <p>4.6</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Camila Vitória Ester Martins</p>
+                         </div>
+ 
+                             <p>02/01/1972</p>
+                             <p>0007</p>
+                             <p>7.4</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Martin Yago Osvaldo Ribeiro</p>
+                         </div>
+ 
+                             <p>01/01/1969</p>
+                             <p>0008</p>
+                             <p>6.2</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Yuri Paulo Rodrigues</p>
+                         </div>
+ 
+                             <p>03/01/1974</p>
+                             <p>0009</p>
+                             <p>8.5</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Lucca Alexandre Cavalcanti</p>
+                         </div>
+ 
+                             <p>04/01/1969</p>
+                             <p>0010</p>
+                             <p>9.9</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+ 
+ 
+                 </div>
+             </div>
+ 
+             <div class="subjects">
+                 <div class="subjects-line" >
+                     <div class="profile-line">
+                         <i class="fa-solid fa-chalkboard-user"></i>
+                         <p>Stefany Hadassa Letícia Porto</p> 
+                     </div>
+                     <p>Social Media Communications</p>
+                     <p>$ 3.300,00</p>
+                     <p>01/01/1991</p>
+                     <i class="fa-solid fa-chevron-down arrow2"></i>
+                 </div>
+ 
+                 <div class="students-container" >
+                     <div class="students-title">
+                         <p>Student</p>
+                         <p>Birth Date</p>
+                         <p>RA</p>
+                         <p>Score</p>
+                     </div>
+ 
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Gabriel Canteiro Cruz</p>
+                         </div>
+ 
+                             <p>20/07/2000</p>
+                             <p>0001</p>
+                             <p>8.5</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Thiago Renato Nascimento</p>
+                         </div>
+ 
+                             <p>03/01/1979</p>
+                             <p>0002</p>
+                             <p>7.5</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+ 
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Ester Mirella Aline Mendes</p>
+                         </div>
+ 
+                             <p>03/01/1950</p>
+                             <p>0003</p>
+                             <p>8</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Guilherme Lucca Silveira</p>
+                         </div>
+ 
+                             <p>03/01/1968</p>
+                             <p>0005</p>
+                             <p>5.9</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Bryan Cauã Moraes</p>
+                         </div>
+ 
+                             <p>04/01/2002</p>
+                             <p>0006</p>
+                             <p>4.6</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Camila Vitória Ester Martins</p>
+                         </div>
+ 
+                             <p>02/01/1972</p>
+                             <p>0007</p>
+                             <p>7.4</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Martin Yago Osvaldo Ribeiro</p>
+                         </div>
+ 
+                             <p>01/01/1969</p>
+                             <p>0008</p>
+                             <p>6.2</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Yuri Paulo Rodrigues</p>
+                         </div>
+ 
+                             <p>03/01/1974</p>
+                             <p>0009</p>
+                             <p>8.5</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Lucca Alexandre Cavalcanti</p>
+                         </div>
+ 
+                             <p>04/01/1969</p>
+                             <p>0010</p>
+                             <p>9.9</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+ 
+ 
+                 </div>
+             </div>
+ 
+             
+         </div><!--container-->
+         
+ 
+     </section>
+     <section class="main-course cyber-security">
+        <h1>Cyber Security</h1>
+ 
+         <div class="container" id="cloud-computer">
+ 
+             <div class="title-professor">
+                 <p>Professor</p>
+                 <p>Subject</p>
+                 <p>Salary</p>
+                 <p>Birth Date</p>
+             </div>
+ 
+             <div class="subjects" >
+                 <div class="subjects-line" >
+                     <div class="profile-line">
+                         <i class="fa-solid fa-chalkboard-user"></i>
+                         <p>Ayla Tereza Malu Silveira</p> 
+                     </div>
+                     <p>Computer Architecture</p>
+                     <p>$ 2.500,00</p>
+                     <p>08/07/1983</p>
+                     <i class="fa-solid fa-chevron-down arrow2"></i>
+                 </div>
+                 <div class="students-container" >
+                     <div class="students-title">
+                         <p>Student</p>
+                         <p>Birth Date</p>
+                         <p>RA</p>
+                         <p>Score</p>
+                     </div>
+ 
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Gabriel Canteiro Cruz</p>
+                         </div>
+ 
+                             <p>20/07/2000</p>
+                             <p>0001</p>
+                             <p>8.5</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Thiago Renato Nascimento</p>
+                         </div>
+ 
+                             <p>03/01/1979</p>
+                             <p>0002</p>
+                             <p>7.5</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+ 
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Ester Mirella Aline Mendes</p>
+                         </div>
+ 
+                             <p>03/01/1950</p>
+                             <p>0003</p>
+                             <p>8</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Guilherme Lucca Silveira</p>
+                         </div>
+ 
+                             <p>03/01/1968</p>
+                             <p>0005</p>
+                             <p>5.9</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Bryan Cauã Moraes</p>
+                         </div>
+ 
+                             <p>04/01/2002</p>
+                             <p>0006</p>
+                             <p>4.6</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Camila Vitória Ester Martins</p>
+                         </div>
+ 
+                             <p>02/01/1972</p>
+                             <p>0007</p>
+                             <p>7.4</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Martin Yago Osvaldo Ribeiro</p>
+                         </div>
+ 
+                             <p>01/01/1969</p>
+                             <p>0008</p>
+                             <p>6.2</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Yuri Paulo Rodrigues</p>
+                         </div>
+ 
+                             <p>03/01/1974</p>
+                             <p>0009</p>
+                             <p>8.5</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+                     <div class="students">
+                         <div class="profile-line">
+                             <i class="fa-solid fa-user"></i>
+                             <p>Lucca Alexandre Cavalcanti</p>
+                         </div>
+ 
+                             <p>04/01/1969</p>
+                             <p>0010</p>
+                             <p>9.9</p>
+                             <i id="trash" class="fa-solid fa-trash-can"></i>
+                     </div>
+ 
+ 
+ 
+                 </div>
+             </div>
+ 
+             <div class="subjects">
+                 <div class="subjects-line" >
+                     <div class="profile-line">
+                         <i class="fa-solid fa-chalkboard-user"></i>
+                         <p>Fernando Calebe Gonçalves</p> 
+                     </div>
+                     <p>Maths</p>
                      <p>$ 1.969,00</p>
                      <p>01/01/1991</p>
                      <i class="fa-solid fa-chevron-down arrow2"></i>
@@ -2047,10 +3858,11 @@
 
 </div>
 <script src="js/sidebar.js"></script>
-<script src="/js/navigate.js"></script>
-<script src="/js/register_course.js"></script>
-<script src="/js/register_student.js"></script>
-<script src="/js/register_professor.js"></script>
-<script src="/js/course.js"></script>
+<script src="js/navigate.js"></script>
+<script src="js/register_course.js"></script>
+<script src="js/register_student.js"></script>
+<script src="js/register_professor.js"></script>
+<script src="js/course.js"></script>
+<script src="js/dashboard.js"></script>
 </body>
 </html>

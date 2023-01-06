@@ -21,7 +21,7 @@ function addProfessor(){
     let salary = getSalary.value
     let subject = getSubject.value
 
-    let local = document.getElementById('cloud-computing')
+    let local = document.querySelector('.cloud-computing')
     let professorOptionLocal = document.querySelector('.subject #professor')
 
 

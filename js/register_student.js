@@ -32,7 +32,6 @@ function addStudent(){
     </div>
     `
 
-    console.log()
 
     if(name === '' || birthDate === '' || ra === '' || gender === ''){
        
