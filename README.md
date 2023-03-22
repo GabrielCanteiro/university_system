@@ -1,5 +1,5 @@
 
-# Entrega do desafio Tecnico
+# University System
 
 ## Apresentação do projeto
 Projeto desenvolvido utilizando apenas HTML, CSS e JavaScript
@@ -21,13 +21,10 @@ Há um limite para criação de 50 matérias para cada curso.
 
 >*A função de registrar o curso ainda não foi adicionada.*
   
-#### Elementos que ainda não foram implementados ao projeto, porém sou _perfeitamente capaz_ de faze-lo:
+#### Elementos que ainda não foram implementados ao projeto:
 >Responsividade para mobile.
 
 >Padronizar mascara para as datas de nascimento e o salário dos professores.
 
->Tratar os dados dos inputs com classes, aplicando orientação ao objeto.
 
->Tratar dados Dummy com gráficos
 
->
